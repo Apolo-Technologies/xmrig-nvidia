@@ -1,10 +1,10 @@
-/* XMRig
+/* ZRMig
  * Copyright 2010      Jeff Garzik <jgarzik@pobox.com>
  * Copyright 2012-2014 pooler      <pooler@litecoinpool.org>
  * Copyright 2014      Lucas Jones <https://github.com/lucasjones>
  * Copyright 2014-2016 Wolf9466    <https://github.com/OhGodAPet>
  * Copyright 2016      Jay D Dee   <jayddee246@gmail.com>
- * Copyright 2016-2017 XMRig       <support@xmrig.com>
+ * Copyright 2016-2017 ZRMig       <support@zrmig.com>
  *
  *
  *   This program is free software: you can redistribute it and/or modify
@@ -51,7 +51,7 @@ static void print_versions()
 #   endif
 
     const int cudaVersion = cuda_get_runtime_version();
-    Log::i()->text(Options::i()->colors() ? "\x1B[01;32m * \x1B[01;37mVERSIONS:     \x1B[01;36mXMRig/%s\x1B[01;37m libuv/%s CUDA/%d.%d%s" : " * VERSIONS:     XMRig/%s libuv/%s CUDA/%d.%d%s",
+    Log::i()->text(Options::i()->colors() ? "\x1B[01;32m * \x1B[01;37mVERSIONS:     \x1B[01;36mZRMig/%s\x1B[01;37m libuv/%s CUDA/%d.%d%s" : " * VERSIONS:     ZRMig/%s libuv/%s CUDA/%d.%d%s",
                    APP_VERSION, uv_version_string(), cudaVersion / 1000, cudaVersion % 100, buf);
 }
 
@@ -119,7 +119,7 @@ static void print_gpu()
 }
 
 
-#ifndef XMRIG_NO_API
+#ifndef ZRMIG_NO_API
 static void print_api()
 {
     if (Options::i()->apiPort() == 0) {
@@ -170,7 +170,7 @@ bool Summary::print()
     print_algo();
     print_pools();
 
-#   ifndef XMRIG_NO_API
+#   ifndef ZRMIG_NO_API
     print_api();
 #   endif
 

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
-project(xmrig-nvidia)
+project(zrmig-nvidia)
 
 option(WITH_AEON  "CryptoNight-Lite support" ON)
 option(WITH_HTTPD "HTTP REST API" ON)
@@ -90,7 +90,7 @@ set(SOURCES
     src/workers/Handle.cpp
     src/workers/Hashrate.cpp
     src/workers/Workers.cpp
-    src/xmrig.cpp
+    src/zrmig.cpp
    )
 
 set(SOURCES_CRYPTO
@@ -130,9 +130,9 @@ else()
     set(EXTRA_LIBS pthread)
 endif()
 
-add_definitions(/DXMRIG_NVIDIA_PROJECT)
+add_definitions(/DZRMIG_NVIDIA_PROJECT)
 add_definitions(/DUNICODE)
-add_definitions(/DXMRIG_NO_LIBCPUID)
+add_definitions(/DZRMIG_NO_LIBCPUID)
 add_definitions(/D__STDC_FORMAT_MACROS)
 add_definitions(/DRAPIDJSON_SSE2)
 #add_definitions(/DAPP_DEBUG)
@@ -154,7 +154,7 @@ if (NVML_FOUND)
 
     set(SOURCES_NVML src/nvidia/NvmlApi.cpp)
 else()
-    add_definitions(/DXMRIG_NO_NVML)
+    add_definitions(/DZRMIG_NO_NVML)
 
     set(SOURCES_NVML src/nvidia/NvmlApi_stub.cpp)
 endif()
@@ -166,7 +166,7 @@ if (HAVE_SYSLOG_H)
 endif()
 
 if (NOT WITH_AEON)
-    add_definitions(/DXMRIG_NO_AEON)
+    add_definitions(/DZRMIG_NO_AEON)
 endif()
 
 if (WITH_HTTPD)
@@ -179,8 +179,8 @@ if (WITH_HTTPD)
         message(FATAL_ERROR "microhttpd NOT found: use `-DWITH_HTTPD=OFF` to build without http deamon support")
     endif()
 else()
-    add_definitions(/DXMRIG_NO_HTTPD)
-    add_definitions(/DXMRIG_NO_API)
+    add_definitions(/DZRMIG_NO_HTTPD)
+    add_definitions(/DZRMIG_NO_API)
 
     set(MHD_LIBRARY "")
 endif()
@@ -190,4 +190,4 @@ include_directories(src/3rdparty)
 include_directories(${UV_INCLUDE_DIR})
 
 add_executable(${PROJECT_NAME} ${HEADERS} ${SOURCES} ${SOURCES_OS} ${SOURCES_NVML} ${HEADERS_CRYPTO} ${SOURCES_CRYPTO} ${SOURCES_SYSLOG} ${HTTPD_SOURCES})
-target_link_libraries(${PROJECT_NAME} xmrig-cuda ${UV_LIBRARIES} ${MHD_LIBRARY} ${LIBS} ${EXTRA_LIBS} ${CPUID_LIB})
+target_link_libraries(${PROJECT_NAME} zrmig-cuda ${UV_LIBRARIES} ${MHD_LIBRARY} ${LIBS} ${EXTRA_LIBS} ${CPUID_LIB})

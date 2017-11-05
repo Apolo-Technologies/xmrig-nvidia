@@ -1,10 +1,10 @@
-# XMRig
-XMRig is high performance Monero (XMR) NVIDIA miner, with the official full Windows support.
+# ZRMig
+ZRMig is high performance Zerium (ZRM) NVIDIA miner, with the official full Windows support.
 
 GPU mining part based on [psychocrypt](https://github.com/psychocrypt) code used in xmr-stak-nvidia.
 
-* This is the **NVIDIA GPU** mining version, there is also a [CPU version](https://github.com/xmrig/xmrig) and [AMD GPU version]( https://github.com/xmrig/xmrig-amd).
-* [Roadmap](https://github.com/xmrig/xmrig/issues/106) for next releases.
+* This is the **NVIDIA GPU** mining version, there is also a [CPU version](https://github.com/zrmig/zrmig) and [AMD GPU version]( https://github.com/zrmig/zrmig-amd).
+* [Roadmap](https://github.com/zrmig/zrmig/issues/106) for next releases.
 
 <img src="https://i.imgur.com/wRCZ3IJ.png" width="620" >
 
@@ -12,7 +12,7 @@ GPU mining part based on [psychocrypt](https://github.com/psychocrypt) code used
 * [Features](#features)
 * [Download](#download)
 * [Usage](#usage)
-* [Build](https://github.com/xmrig/xmrig-nvidia/wiki/Build)
+* [Build](https://github.com/zrmig/zrmig-nvidia/wiki/Build)
 * [Donations](#donations)
 * [Contacts](#contacts)
 
@@ -27,9 +27,9 @@ GPU mining part based on [psychocrypt](https://github.com/psychocrypt) code used
 * It's open source software.
 
 ## Download
-* Binary releases: https://github.com/xmrig/xmrig-nvidia/releases
-* Git tree: https://github.com/xmrig/xmrig-nvidia.git
-  * Clone with `git clone https://github.com/xmrig/xmrig-nvidia.git`  :hammer: [Build instructions](https://github.com/xmrig/xmrig-nvidia/wiki/Build).
+* Binary releases: https://github.com/zrmig/zrmig-nvidia/releases
+* Git tree: https://github.com/zrmig/zrmig-nvidia.git
+  * Clone with `git clone https://github.com/zrmig/zrmig-nvidia.git`  :hammer: [Build instructions](https://github.com/zrmig/zrmig-nvidia/wiki/Build).
 
 ## Usage
 
@@ -102,9 +102,9 @@ If `threads` option not specified the miner will try automatically create optima
 ## Donations
 Default donation 5% (5 minutes in 100 minutes) can be reduced to 1% via command line option `--donate-level`.
 
-* XMR: `48edfHu7V9Z84YzzMa6fUueoELZ9ZRXq9VetWzYGzKt52XU5xvqgzYnDK9URnRoJMk1j8nLwEVsaSWJ4fhdUyZijBGUicoD`
+* ZRM: `48edfHu7V9Z84YzzMa6fUueoELZ9ZRXq9VetWzYGzKt52XU5xvqgzYnDK9URnRoJMk1j8nLwEVsaSWJ4fhdUyZijBGUicoD`
 * BTC: `1P7ujsXeX7GxQwHNnJsRMgAdNkFZmNVqJT`
 
 ## Contacts
-* support@xmrig.com
-* [reddit](https://www.reddit.com/user/XMRig/)
+* support@zrmig.com
+* [reddit](https://www.reddit.com/user/ZRMig/)

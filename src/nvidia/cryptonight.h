@@ -41,7 +41,7 @@ void cryptonight_extra_cpu_prepare(nvid_ctx* ctx, uint32_t startNonce);
 void cryptonight_gpu_hash(nvid_ctx* ctx);
 void cryptonight_extra_cpu_final(nvid_ctx* ctx, uint32_t startNonce, uint64_t target, uint32_t* rescount, uint32_t *resnonce);
 
-#ifndef XMRIG_NO_AEON
+#ifndef ZRMIG_NO_AEON
 int cryptonight_gpu_init_lite(nvid_ctx *ctx);
 void cryptonight_gpu_hash_lite(nvid_ctx* ctx);
 #endif

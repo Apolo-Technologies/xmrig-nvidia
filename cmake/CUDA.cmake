@@ -3,9 +3,9 @@ if (CMAKE_CXX_COMPILER_ID MATCHES MSVC)
     set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /MT")
 endif()
 
-option(XMR-STAK_LARGEGRID "Support large CUDA block count > 128" ON)
-if(XMR-STAK_LARGEGRID)
-    add_definitions("-DXMR_STAK_LARGEGRID=${XMR-STAK_LARGEGRID}")
+option(ZRM-STAK_LARGEGRID "Support large CUDA block count > 128" ON)
+if(ZRM-STAK_LARGEGRID)
+    add_definitions("-DZRM_STAK_LARGEGRID=${ZRM-STAK_LARGEGRID}")
 endif()
 
 set(DEVICE_COMPILER "nvcc")
@@ -132,11 +132,11 @@ set(CUDA_SOURCES
 )
 
 if("${CUDA_COMPILER}" STREQUAL "clang")
-    add_library(xmrig-cuda STATIC ${CUDA_SOURCES})
+    add_library(zrmig-cuda STATIC ${CUDA_SOURCES})
     
-    set_target_properties(xmrig-cuda PROPERTIES COMPILE_FLAGS ${CLANG_BUILD_FLAGS})
-    set_target_properties(xmrig-cuda PROPERTIES LINKER_LANGUAGE CXX)
+    set_target_properties(zrmig-cuda PROPERTIES COMPILE_FLAGS ${CLANG_BUILD_FLAGS})
+    set_target_properties(zrmig-cuda PROPERTIES LINKER_LANGUAGE CXX)
     set_source_files_properties(${CUDA_SOURCES} PROPERTIES LANGUAGE CXX)
 else()
-    cuda_add_library(xmrig-cuda STATIC ${CUDA_SOURCES})
+    cuda_add_library(zrmig-cuda STATIC ${CUDA_SOURCES})
 endif()

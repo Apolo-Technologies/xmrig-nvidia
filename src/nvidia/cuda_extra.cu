@@ -379,7 +379,7 @@ extern "C" int cryptonight_gpu_init(nvid_ctx* ctx)
 }
 
 
-#ifndef XMRIG_NO_AEON
+#ifndef ZRMIG_NO_AEON
 extern "C" int cryptonight_gpu_init_lite(nvid_ctx* ctx)
 {
     return cryptonight_extra_cpu_init<MEMORY_LITE>(ctx);
